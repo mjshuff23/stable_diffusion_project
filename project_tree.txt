@@ -1,0 +1,47 @@
+Project Tree (Generated on Fri Dec 13 18:29:48 EST 2024)
+===================================
+
+.
+├── images
+├── logs
+├── models
+├── scripts
+│   ├── run_application.py
+│   └── train_model.py
+├── src
+│   ├── __pycache__
+│   │   └── config.cpython-311.pyc
+│   ├── chat
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   └── llm_handler.cpython-311.pyc
+│   │   ├── __init__.py
+│   │   └── llm_handler.py
+│   ├── image_generation
+│   │   ├── __init__.py
+│   │   ├── stable_diffusion.py
+│   │   └── train.py
+│   ├── utils
+│   │   ├── __init__.py
+│   │   └── data_processing.py
+│   └── config.py
+├── stable_diffusion_project.egg-info
+│   ├── PKG-INFO
+│   ├── SOURCES.txt
+│   ├── dependency_links.txt
+│   ├── requires.txt
+│   └── top_level.txt
+├── .gitignore
+├── =2.0.0
+├── =4.36.0
+├── config.py
+├── package-lock.json
+├── package.json
+├── project_structure.txt
+├── project_tree.txt
+├── requirements.txt
+├── setup.py
+├── test_imports.py
+└── test_llm.py
+
+11 directories, 30 files

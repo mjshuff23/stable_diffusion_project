@@ -1,5 +1,4 @@
 setup.py
-src/__init__.py
 src/chat/__init__.py
 src/chat/llm_handler.py
 src/image_generation/__init__.py
@@ -10,4 +9,5 @@ src/utils/data_processing.py
 stable_diffusion_project.egg-info/PKG-INFO
 stable_diffusion_project.egg-info/SOURCES.txt
 stable_diffusion_project.egg-info/dependency_links.txt
+stable_diffusion_project.egg-info/requires.txt
 stable_diffusion_project.egg-info/top_level.txt

@@ -1,4 +1,3 @@
-# type: ignore
 import torch
 import diffusers
 import transformers

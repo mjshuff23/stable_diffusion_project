@@ -1,0 +1,297 @@
+[
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "ImageGenerator",
+        "importPath": "src.image_generation.stable_diffusion",
+        "description": "src.image_generation.stable_diffusion",
+        "isExtraImport": true,
+        "detail": "src.image_generation.stable_diffusion",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "src.config",
+        "description": "src.config",
+        "isExtraImport": true,
+        "detail": "src.config",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "src.config",
+        "description": "src.config",
+        "isExtraImport": true,
+        "detail": "src.config",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "src.config",
+        "description": "src.config",
+        "isExtraImport": true,
+        "detail": "src.config",
+        "documentation": {}
+    },
+    {
+        "label": "QwenHandler",
+        "importPath": "src.chat.llm_handler",
+        "description": "src.chat.llm_handler",
+        "isExtraImport": true,
+        "detail": "src.chat.llm_handler",
+        "documentation": {}
+    },
+    {
+        "label": "QwenHandler",
+        "importPath": "src.chat.llm_handler",
+        "description": "src.chat.llm_handler",
+        "isExtraImport": true,
+        "detail": "src.chat.llm_handler",
+        "documentation": {}
+    },
+    {
+        "label": "transformers",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "transformers",
+        "description": "transformers",
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoModelForCausalLM",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoTokenizer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "TrainingArguments",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "Trainer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "torch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch",
+        "description": "torch",
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "diffusers",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "diffusers",
+        "description": "diffusers",
+        "detail": "diffusers",
+        "documentation": {}
+    },
+    {
+        "label": "StableDiffusionPipeline",
+        "importPath": "diffusers",
+        "description": "diffusers",
+        "isExtraImport": true,
+        "detail": "diffusers",
+        "documentation": {}
+    },
+    {
+        "label": "StableDiffusionPipeline",
+        "importPath": "diffusers",
+        "description": "diffusers",
+        "isExtraImport": true,
+        "detail": "diffusers",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "load_dataset",
+        "importPath": "datasets",
+        "description": "datasets",
+        "isExtraImport": true,
+        "detail": "datasets",
+        "documentation": {}
+    },
+    {
+        "label": "setup",
+        "importPath": "setuptools",
+        "description": "setuptools",
+        "isExtraImport": true,
+        "detail": "setuptools",
+        "documentation": {}
+    },
+    {
+        "label": "find_packages",
+        "importPath": "setuptools",
+        "description": "setuptools",
+        "isExtraImport": true,
+        "detail": "setuptools",
+        "documentation": {}
+    },
+    {
+        "label": "accelerate",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "accelerate",
+        "description": "accelerate",
+        "detail": "accelerate",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "scripts.run_application",
+        "description": "scripts.run_application",
+        "peekOfCode": "app = FastAPI()\nimage_generator = ImageGenerator()\nchat_handler = QwenHandler()\n@app.post(\"/generate-image\")\nasync def generate_image(prompt: str):\n    image = image_generator.generate_image(prompt)\n    return {\"status\": \"success\", \"image\": image}\n@app.post(\"/chat\")\nasync def chat(message: str):\n    response = chat_handler.generate_response(message)",
+        "detail": "scripts.run_application",
+        "documentation": {}
+    },
+    {
+        "label": "image_generator",
+        "kind": 5,
+        "importPath": "scripts.run_application",
+        "description": "scripts.run_application",
+        "peekOfCode": "image_generator = ImageGenerator()\nchat_handler = QwenHandler()\n@app.post(\"/generate-image\")\nasync def generate_image(prompt: str):\n    image = image_generator.generate_image(prompt)\n    return {\"status\": \"success\", \"image\": image}\n@app.post(\"/chat\")\nasync def chat(message: str):\n    response = chat_handler.generate_response(message)\n    return {\"status\": \"success\", \"response\": response}",
+        "detail": "scripts.run_application",
+        "documentation": {}
+    },
+    {
+        "label": "chat_handler",
+        "kind": 5,
+        "importPath": "scripts.run_application",
+        "description": "scripts.run_application",
+        "peekOfCode": "chat_handler = QwenHandler()\n@app.post(\"/generate-image\")\nasync def generate_image(prompt: str):\n    image = image_generator.generate_image(prompt)\n    return {\"status\": \"success\", \"image\": image}\n@app.post(\"/chat\")\nasync def chat(message: str):\n    response = chat_handler.generate_response(message)\n    return {\"status\": \"success\", \"response\": response}\nif __name__ == \"__main__\":",
+        "detail": "scripts.run_application",
+        "documentation": {}
+    },
+    {
+        "label": "QwenHandler",
+        "kind": 6,
+        "importPath": "src.chat.llm_handler",
+        "description": "src.chat.llm_handler",
+        "peekOfCode": "class QwenHandler:\n    def __init__(self, model_path: Optional[str] = None):\n        \"\"\"\n        Initialize the Qwen LLM handler.\n        Args:\n            model_path: Optional path to a fine-tuned model. If None, uses the default from Config.\n        \"\"\"\n        self.model_path: str = model_path or Config.LLM_MODEL_NAME\n        self.device: torch.device = torch.device(Config.DEVICE)\n        self.tokenizer: AutoTokenizer = AutoTokenizer.from_pretrained(",
+        "detail": "src.chat.llm_handler",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.chat.llm_handler",
+        "description": "src.chat.llm_handler",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass QwenHandler:\n    def __init__(self, model_path: Optional[str] = None):\n        \"\"\"\n        Initialize the Qwen LLM handler.\n        Args:\n            model_path: Optional path to a fine-tuned model. If None, uses the default from Config.\n        \"\"\"\n        self.model_path: str = model_path or Config.LLM_MODEL_NAME\n        self.device: torch.device = torch.device(Config.DEVICE)",
+        "detail": "src.chat.llm_handler",
+        "documentation": {}
+    },
+    {
+        "label": "ImageGenerator",
+        "kind": 6,
+        "importPath": "src.image_generation.stable_diffusion",
+        "description": "src.image_generation.stable_diffusion",
+        "peekOfCode": "class ImageGenerator:\n    def __init__(self):\n        self.pipeline = StableDiffusionPipeline.from_pretrained(\n            Config.SD_MODEL_NAME,\n            torch_dtype=torch.float16\n        ).to(\"cuda\")\n    def generate_image(self, prompt: str) -> Image.Image:\n        \"\"\"Generate image from text prompt.\"\"\"\n        with torch.no_grad():\n            image = self.pipeline(prompt).images[0]",
+        "detail": "src.image_generation.stable_diffusion",
+        "documentation": {}
+    },
+    {
+        "label": "train_stable_diffusion",
+        "kind": 2,
+        "importPath": "src.image_generation.train",
+        "description": "src.image_generation.train",
+        "peekOfCode": "def train_stable_diffusion():\n    \"\"\"Fine-tune Stable Diffusion on custom dataset.\"\"\"\n    # Load model\n    pipeline = StableDiffusionPipeline.from_pretrained(\n        Config.SD_MODEL_NAME,\n        torch_dtype=torch.float16\n    )\n    # Load and prepare dataset\n    dataset = load_dataset(\"imagefolder\", data_dir=Config.DATASET_PATH)\n    # Training configuration",
+        "detail": "src.image_generation.train",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "kind": 6,
+        "importPath": "src.config",
+        "description": "src.config",
+        "peekOfCode": "class Config:\n    # Stable Diffusion settings\n    SD_MODEL_NAME = \"runwayml/stable-diffusion-v1-5\"\n    TRAINING_EPOCHS = 100\n    LEARNING_RATE = 1e-5\n    BATCH_SIZE = 4\n    # Dataset settings\n    DATASET_PATH = \"images/\"\n    IMAGE_SIZE = 512\n    VALIDATION_SPLIT = 0.1  # 10% of data for validation",
+        "detail": "src.config",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "kind": 6,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "class Config:\n    # Stable Diffusion settings\n    SD_MODEL_NAME = \"runwayml/stable-diffusion-v1-5\"\n    TRAINING_EPOCHS = 100\n    LEARNING_RATE = 1e-5\n    BATCH_SIZE = 4\n    # Dataset settings\n    DATASET_PATH = \"images/\"\n    IMAGE_SIZE = 512\n    VALIDATION_SPLIT = 0.1  # 10% of data for validation",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "test_llm",
+        "kind": 2,
+        "importPath": "test_llm",
+        "description": "test_llm",
+        "peekOfCode": "def test_llm():\n    handler = QwenHandler()\n    response = handler.generate_response(\"What is the capital of France?\")\n    print(response)\nif __name__ == \"__main__\":\n    Config.validate_paths()  # Create necessary directories\n    test_llm()",
+        "detail": "test_llm",
+        "documentation": {}
+    }
+]
