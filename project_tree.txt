@@ -1,4 +1,4 @@
-Project Tree (Generated on Fri Dec 13 18:29:48 EST 2024)
+Project Tree (Generated on Sat Dec 14 01:44:43 EST 2024)
 ===================================
 
 .
@@ -10,6 +10,7 @@ Project Tree (Generated on Fri Dec 13 18:29:48 EST 2024)
 │   └── train_model.py
 ├── src
 │   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
 │   │   └── config.cpython-311.pyc
 │   ├── chat
 │   │   ├── __pycache__
@@ -24,6 +25,7 @@ Project Tree (Generated on Fri Dec 13 18:29:48 EST 2024)
 │   ├── utils
 │   │   ├── __init__.py
 │   │   └── data_processing.py
+│   ├── __init__.py
 │   └── config.py
 ├── stable_diffusion_project.egg-info
 │   ├── PKG-INFO
@@ -35,13 +37,15 @@ Project Tree (Generated on Fri Dec 13 18:29:48 EST 2024)
 ├── =2.0.0
 ├── =4.36.0
 ├── config.py
+├── mypy.ini
+├── output.txt
 ├── package-lock.json
 ├── package.json
-├── project_structure.txt
 ├── project_tree.txt
 ├── requirements.txt
+├── scripts.txt
 ├── setup.py
 ├── test_imports.py
 └── test_llm.py
 
-11 directories, 30 files
+11 directories, 34 files
