@@ -27,7 +27,7 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     
-    os.makedirs(args.output, exist_ok=True)
+    os.makedirs(args.output, exist_ok=True) # Create the output directory if it doesn't exist
     
     train_model(
         model_name=args.model,

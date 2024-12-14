@@ -419,7 +419,7 @@
         "kind": 2,
         "importPath": "src.image_generation.train",
         "description": "src.image_generation.train",
-        "peekOfCode": "def train_stable_diffusion():\n    \"\"\"Fine-tune Stable Diffusion on a custom dataset.\"\"\"\n    # Define data transformations\n    transform = Compose([\n        Resize((512, 512)),\n        CenterCrop(512),\n        ToTensor(),\n        Normalize([0.5], [0.5])\n    ])\n    def preprocess_data(example):",
+        "peekOfCode": "def train_stable_diffusion():\n    \"\"\"Fine-tune Stable Diffusion on a custom dataset.\"\"\"\n    # Define data transformations\n    transform = Compose([\n        Resize((512, 512)),\n        CenterCrop(512),\n        ToTensor(),\n        Normalize([0.5], [0.5])\n    ]) \n    def preprocess_data(example):",
         "detail": "src.image_generation.train",
         "documentation": {}
     },
@@ -446,7 +446,7 @@
         "kind": 6,
         "importPath": "src.config",
         "description": "src.config",
-        "peekOfCode": "class Config:\n    # Stable Diffusion settings\n    SD_MODEL_NAME = \"runwayml/stable-diffusion-v1-5\"\n    TRAINING_EPOCHS = 100\n    LEARNING_RATE = 1e-5\n    BATCH_SIZE = 4\n    # Dataset settings\n    DATASET_PATH = \"images/\"\n    IMAGE_SIZE = 512\n    VALIDATION_SPLIT = 0.1  # 10% of data for validation",
+        "peekOfCode": "class Config:\n    # Stable Diffusion settings\n    SD_MODEL_NAME = \"runwayml/stable-diffusion-v1-5\" # or \"runwayml/stable-diffusion-v1-5-tiny\"\n    TRAINING_EPOCHS = 100 # epochs are rounds of training\n    LEARNING_RATE = 1e-5 # 1e-5 is a good starting point\n    BATCH_SIZE = 4 # 4 is a good starting point\n    # Dataset settings\n    DATASET_PATH = \"images/\" # Path to the dataset\n    IMAGE_SIZE = 512 # Images will be resized to this size\n    VALIDATION_SPLIT = 0.1  # 10% of data for validation, meaning 90% for training",
         "detail": "src.config",
         "documentation": {}
     },

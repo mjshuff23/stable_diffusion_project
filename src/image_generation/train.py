@@ -13,7 +13,7 @@ def train_stable_diffusion():
         CenterCrop(512),
         ToTensor(),
         Normalize([0.5], [0.5])
-    ])
+    ]) 
 
     def preprocess_data(example):
         """Apply transformations to each image in the dataset."""
