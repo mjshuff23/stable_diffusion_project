@@ -1,6 +1,6 @@
 import argparse
 import os
-from src.image_generation.train import train as train_stable_diffusion
+from src.image_generation.train import train_stable_diffusion
 from src.config import Config
 
 def train_model(model_name: str, dataset_path: str, output_dir: str, epochs: int, batch_size: int, learning_rate: float):
