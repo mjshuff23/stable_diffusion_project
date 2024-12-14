@@ -40,6 +40,14 @@
         "documentation": {}
     },
     {
+        "label": "Config",
+        "importPath": "src.config",
+        "description": "src.config",
+        "isExtraImport": true,
+        "detail": "src.config",
+        "documentation": {}
+    },
+    {
         "label": "QwenHandler",
         "importPath": "src.chat.llm_handler",
         "description": "src.chat.llm_handler",
@@ -53,6 +61,32 @@
         "description": "src.chat.llm_handler",
         "isExtraImport": true,
         "detail": "src.chat.llm_handler",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "train",
+        "importPath": "src.image_generation.train",
+        "description": "src.image_generation.train",
+        "isExtraImport": true,
+        "detail": "src.image_generation.train",
         "documentation": {}
     },
     {
@@ -130,6 +164,14 @@
         "documentation": {}
     },
     {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "logging",
         "kind": 6,
         "isExtraImport": true,
@@ -172,11 +214,51 @@
         "documentation": {}
     },
     {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
         "label": "load_dataset",
         "importPath": "datasets",
         "description": "datasets",
         "isExtraImport": true,
         "detail": "datasets",
+        "documentation": {}
+    },
+    {
+        "label": "transforms",
+        "importPath": "torchvision",
+        "description": "torchvision",
+        "isExtraImport": true,
+        "detail": "torchvision",
+        "documentation": {}
+    },
+    {
+        "label": "Dataset",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
+        "documentation": {}
+    },
+    {
+        "label": "random_split",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
         "documentation": {}
     },
     {
@@ -232,6 +314,15 @@
         "documentation": {}
     },
     {
+        "label": "train_model",
+        "kind": 2,
+        "importPath": "scripts.train_model",
+        "description": "scripts.train_model",
+        "peekOfCode": "def train_model(model_name: str, dataset_path: str, output_dir: str, epochs: int, batch_size: int, learning_rate: float):\n    \"\"\"Controller function to train different models.\"\"\"\n    # Update configuration dynamically\n    Config.SD_MODEL_NAME = model_name\n    Config.DATASET_PATH = dataset_path\n    Config.OUTPUT_DIR = output_dir\n    Config.TRAINING_EPOCHS = epochs\n    Config.BATCH_SIZE = batch_size\n    Config.LEARNING_RATE = learning_rate\n    print(f\"Training {model_name} on {dataset_path} for {epochs} epochs...\")",
+        "detail": "scripts.train_model",
+        "documentation": {}
+    },
+    {
         "label": "QwenHandler",
         "kind": 6,
         "importPath": "src.chat.llm_handler",
@@ -265,6 +356,24 @@
         "description": "src.image_generation.train",
         "peekOfCode": "def train_stable_diffusion():\n    \"\"\"Fine-tune Stable Diffusion on custom dataset.\"\"\"\n    # Load model\n    pipeline = StableDiffusionPipeline.from_pretrained(\n        Config.SD_MODEL_NAME,\n        torch_dtype=torch.float16\n    )\n    # Load and prepare dataset\n    dataset = load_dataset(\"imagefolder\", data_dir=Config.DATASET_PATH)\n    # Training configuration",
         "detail": "src.image_generation.train",
+        "documentation": {}
+    },
+    {
+        "label": "CustomImageDataset",
+        "kind": 6,
+        "importPath": "src.utils.data_processing",
+        "description": "src.utils.data_processing",
+        "peekOfCode": "class CustomImageDataset(Dataset):\n    def __init__(self, image_dir: str, transform=None):\n        self.image_dir = image_dir\n        self.transform = transform\n        self.image_paths = [os.path.join(image_dir, img) for img in os.listdir(image_dir) if img.endswith(('.png', '.jpg', '.jpeg'))]\n    def __len__(self):\n        return len(self.image_paths)\n    def __getitem__(self, idx):\n        img_path = self.image_paths[idx]\n        image = Image.open(img_path).convert(\"RGB\")",
+        "detail": "src.utils.data_processing",
+        "documentation": {}
+    },
+    {
+        "label": "get_data_loaders",
+        "kind": 2,
+        "importPath": "src.utils.data_processing",
+        "description": "src.utils.data_processing",
+        "peekOfCode": "def get_data_loaders(data_dir: str, batch_size: int, val_split: float = 0.2) -> Tuple[DataLoader, DataLoader]:\n    transform = transforms.Compose([\n        transforms.Resize((512, 512)),\n        transforms.ToTensor(),\n        transforms.Normalize([0.5], [0.5]),\n    ])\n    dataset = CustomImageDataset(image_dir=data_dir, transform=transform)\n    val_size = int(len(dataset) * val_split)\n    train_size = len(dataset) - val_size\n    train_dataset, val_dataset = random_split(dataset, [train_size, val_size])",
+        "detail": "src.utils.data_processing",
         "documentation": {}
     },
     {
